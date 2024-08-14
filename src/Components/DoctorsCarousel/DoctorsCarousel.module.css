@@ -1,0 +1,27 @@
+.docimage{
+    height:auto;
+    width:20rem;
+    padding-top: 2rem;
+    padding-left: 10px;
+    padding-right: 1.2rem;
+    border:10px solid white;
+    border-top-right-radius: 10rem;
+    border-top-left-radius: 10rem;
+    box-shadow: 0px 15px 55px -10px #00000017;
+
+    background: linear-gradient(144.2deg, #E1F3FF 0%, #2AA7FF 100%);
+}
+.doccontainer{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.doccontainer p{
+    font-size:1.3rem;
+    font-weight: 400;
+}
+.doccontainer p:last-child{
+    font-size:1rem;
+    font-weight: 700;
+    color: var(--primary-main-color);
+}

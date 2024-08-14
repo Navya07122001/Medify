@@ -1,0 +1,191 @@
+.container{
+    background:var(--primary-background-color);
+    display:flex;
+    justify-content: space-between;
+margin-bottom: 50rem;
+    padding:6rem 3rem 6rem 16rem;
+}
+.hospitalname{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: var(--primary-main-color);
+}
+.placename{
+    font-size:1.2rem;
+    font-weight: 700;
+    color:#414146
+}
+.description{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color:#414146;
+
+}
+.description1{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color:#414146;
+    margin-top:0.8rem ;
+    
+
+}
+.bookingbtn{
+    color:var(--primary-main-color);
+    border: none;
+    background: var(--primary-main-color);
+    color: white;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    
+    font-weight: 600;
+    border-radius: 10px;
+    letter-spacing:1spx;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 15px;
+
+}
+.hospitalcontainer{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;   
+}
+.bookingContainer{
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-end;
+   padding-bottom: 1rem;
+}
+.slotbooking{
+    background-color: white;
+    width: 100%;
+    height:100px;
+    margin:none;
+    
+}
+.arrowbtns{
+    border: none;
+    background:white;
+}
+.topicon{
+    width:100px;
+    height:10px;
+    background: #00A500;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+  
+}
+.carouselsection{
+    display: flex;
+}
+.carouselitems{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width:10vw;
+}
+.carouselitems::after{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top:1;
+    content: '';
+    width: 100%;
+    background-color: #F0F0F5;
+    
+
+    height:4px;
+    
+    width:100%;
+}
+.carouselitems:hover::after{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top:1;
+    content: '';
+    width: 100%;
+    background-color: var(--primary-main-color);
+    
+
+    height:4px;
+    
+    width:100%;
+}
+.day{
+    text-align:start;
+    margin-right:2rem;
+    padding:1rem;
+    width:60px;
+    height:20px;
+    font-weight:400;
+    font-size:14px;
+    line-height:20px;
+}
+#app {
+    height: 100%;
+  }
+  
+  .carouselContainer {
+    display: flex;
+    align-items: center;
+  
+    position: relative;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    
+  }
+  
+  /* .leftbtn, .rightbtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-90%);
+    z-index: 10;
+  } */
+  
+  /* .leftbtn {
+    left: -20px;
+  }
+  
+  .rightbtn {
+    right: 20px;
+  }
+  
+  .sliderbtn img {
+    width: 40px;
+    height: 40px;
+  } */
+  
+ 
+ 
+@media(max-width:767px)
+{
+    .container{
+        flex-direction: column;
+    }
+    .hospitalcontainer{
+        flex-direction: column;
+        
+    }
+    .card{
+        flex-direction: column;
+        
+    }
+}
+
+
+

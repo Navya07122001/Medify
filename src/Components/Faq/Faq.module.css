@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+}
+.faqsection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:3rem;
+    padding: 2rem 18rem 2rem 13rem;
+}
+.question{
+        font-size: 1.5rem;
+        font-family: 600;
+        color:var(--primary-heading-color);
+
+}
+@media(max-width:767px)
+{
+    .faqsection{
+        flex-direction: column;
+    }
+    .question{
+        font-size: 0.8rem;
+    }
+}

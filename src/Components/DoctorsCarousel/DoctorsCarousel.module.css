@@ -1,3 +1,11 @@
+.heading{
+    font-family:'Poppins';
+    font-weight:600;
+    font-size:3rem;
+    line-height:4.5rem;
+    color:#1B3C74;
+    margin-top:2rem;
+}
 .docimage{
     height:auto;
     width:20rem;
@@ -12,16 +20,22 @@
     background: linear-gradient(144.2deg, #E1F3FF 0%, #2AA7FF 100%);
 }
 .doccontainer{
-    display: flex;
+    display: none;
     flex-direction: column;
    align-items: center;
+   /* text-align:center; */
 }
-.doccontainer p{
-    font-size:1.3rem;
-    font-weight: 400;
+.doctorname{
+    font-family:Poppins;
+    font-size:1.5rem;
+    line-height:3rem;
+    font-weight:400;
+    text-align:center;
+    color:#1B3C74;
 }
-.doccontainer p:last-child{
+.role{
+    color:#2AA7FF;
+    font-weight:500;
+    line-height:1.5rem;
     font-size:1rem;
-    font-weight: 700;
-    color: var(--primary-main-color);
 }

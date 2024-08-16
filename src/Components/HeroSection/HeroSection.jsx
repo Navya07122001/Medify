@@ -109,8 +109,8 @@ function HeroSection() {
             <DoctorsCarousel />
             <PatientCare />
             <div >
-                <span style={{ fontSize: "1rem", fontWeight: '500', color: "var(--primary-main-color)" }}>Blog & News</span>
-                <div style={{ fontSize: "3rem", fontWeight: '600', color: "var(--primary-heading-color)", marginTop: "1rem", paddingBottom: "1rem" }}>Read our Latest News</div>
+                <div style={{marginTop:"1.5rem",lineHeight:"1.5rem" ,fontSize: "1rem", fontWeight: '600', color: "#2AA7FF" }}>Blog & News</div>
+                <div style={{ fontSize: "3rem", fontWeight: '600', color: "var(--primary-heading-color)", marginTop: "1rem", paddingBottom: "1rem", marginBottom: "1.5rem" }}>Read our Latest News</div>
                 <div  className={styles.newscard}>
                    
                         <Card sx={{ maxWidth: 345, borderRadius: '10px' }}>

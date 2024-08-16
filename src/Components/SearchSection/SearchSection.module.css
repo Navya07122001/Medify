@@ -34,9 +34,11 @@
     background: transparent;
     background-color: #F0F0F0;
     color: #ABB6C7;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding-left:0.5rem;
     margin-left: 10px;
-    width: 100%;
+    width: 24vw;
+    padding:1rem;
 }
 
 .searchbtn {
@@ -51,6 +53,7 @@
     justify-content: center;
     gap: 5px;
     font-family: Poppins;
+    font-size:1.5rem;
 }
 
 .lookup {
@@ -71,14 +74,25 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     justify-content: center; /* Center icons horizontally */
+    align-items:center;
     margin: 0 auto; /* Center the entire icons grid */
+    margin-top:2rem;
 }
-
-.iconstyles {
-    width: 10rem;
-    height: 6rem;
+.iconsection{
+     width: 203px;
+      height: 153px;
+       background: #FAFBFE;
+        border: 1px solid #FAFBFE;
+         display: flex;
+          align-items:center;
+          justify-content:center;
+           flex-direction: column;    
+           text-align:center;
 }
-
+.iconsection:hover{
+    border:1px solid #2AA7FF;
+    border-radius:5px;
+}
 @media (max-width: 767px) {
     .inputsection {
         grid-template-columns: repeat(1, 1fr);
@@ -98,10 +112,5 @@
 
     .arrangeicons {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .iconstyles {
-        width: 100px;
-        height: 100px;
     }
 }

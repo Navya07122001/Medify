@@ -14,7 +14,7 @@ function Navbar({state,city, setCity, setState, statelist,citylist,handleSearch 
     }
     useEffect(()=>{
         console.log(citylist)
-    },[])
+    },[statelist])
     return (
         <div className={styles.container}>
             <div className={styles.navbarsection}>

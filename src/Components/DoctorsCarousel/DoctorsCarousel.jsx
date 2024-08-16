@@ -13,7 +13,7 @@ function DoctorsCarousel() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 3.6,
         slidesToScroll: 3,
         
         responsive: [
@@ -45,16 +45,16 @@ function DoctorsCarousel() {
       };
     return (
         <div>
-            <p>Our Medical Specialist</p>
-            <div className="slider-container" style={{ display: "block", width: "80%", margin: "0 auto" }}>
-            <Slider {...settings}>
+            <div className={styles.heading}>Our Medical Specialist</div>
+            <div  style={{ display: "block", width: "80%", margin: "0 auto" }}>
+            <Slider {...settings} sx={{display:'block'}}>
             <div className={styles.doccontainer}>
                     <div  className={styles.docimage}>
                       <img src={doctor4} alt="docimg"/>
 
                     </div>
-                    <p>Dr. Lesley Hull</p>
-                    <p>Medicine</p>
+                    <div className={styles.doctorname}>Dr. Lesley Hull</div>
+                    <div className={styles.role}>Medicine</div>
                   
                 </div>
                 <div className={styles.doccontainer}>
@@ -62,33 +62,37 @@ function DoctorsCarousel() {
                       <img src={doctor} alt="docimg"/>
 
                     </div>
-                    <p>Dr. Ahmad Khan</p>
-                    <p>Neurologist</p>
-                  
+                      <div>
+                    <div className={styles.doctorname}>Dr. Ahmad Khan</div>
+                    <div className={styles.role}>Neurologist</div>
+                  </div>
                 </div>
                    <div className={styles.doccontainer}>
                     <div className={styles.docimage}>
                     <img src={doctor1} alt="docimg" />
                     </div>
-                    <p>Dr Ankur Sharma</p>
-                    <p>Medicine</p>
-                    
+                      <div style={{textAlign:'center'}}>
+                    <div className={styles.doctorname}>Dr Ankur Sharma</div>
+                    <div className={styles.role}>Medicine</div>
+                    </div>
                 </div>
                 <div className={styles.doccontainer}>
                     <div className={styles.docimage}>
                     <img src={doctor2} alt="docimg" />
                     </div>
-                    <p>Dr. Heena Sachdeva</p>
-                    <p> Orthopedics</p>
-                    
+                      <div style={{textAlign:'center'}}>
+                    <div className={styles.doctorname}>Dr. Heena Sachdeva</div>
+                    <div className={styles.role}> Orthopedics</div>
+                    </div>
                 </div>
                 <div className={styles.doccontainer}>
                     <div className={styles.docimage}>
                     <img src={doctor3} alt="docimg" />
                     </div>
-                    <p>Dr. Shan Phan</p>
-                    <p>Neurologist</p>
-                    
+                    <div style={{textAlign:'center'}}>
+                    <div className={styles.doctorname}>Dr. Shan Phan</div>
+                    <div className={styles.role}>Neurologist</div>
+                    </div>
                 </div>
                 </Slider>
             </div>

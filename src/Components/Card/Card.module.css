@@ -1,9 +1,11 @@
 .container{
-    background:var(--primary-background-color);
-    display:flex;
-    justify-content: space-between;
-margin-bottom: 50rem;
-    padding:6rem 3rem 6rem 16rem;
+    /* background:var(--primary-background-color); */
+  
+    width:60vw;
+    padding:6rem 3rem 0rem 7rem;
+}
+.main{
+    
 }
 .hospitalname{
     font-size: 1.5rem;
@@ -44,7 +46,7 @@ margin-bottom: 50rem;
 }
 .card{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1.5rem;
     background-color: white;
     border-radius: 15px;
@@ -53,19 +55,22 @@ margin-bottom: 50rem;
 .hospitalcontainer{
     display: flex;
     align-items: center;
-    margin-left: 1rem;   
+    justify-content: space-between;
+ 
 }
 .bookingContainer{
     display: flex;
     flex-direction: column;
    justify-content: flex-end;
-   padding-bottom: 1rem;
+   padding-bottom: 3rem;
 }
 .slotbooking{
     background-color: white;
     width: 100%;
-    height:100px;
+  
     margin:none;
+    margin-top: -1rem;
+    margin-bottom:5rem;
     
 }
 .arrowbtns{
@@ -85,23 +90,25 @@ margin-bottom: 50rem;
 }
 .carouselsection{
     display: flex;
+    margin-top:-1rem;   
 }
 .carouselitems{
     display:flex;
-    justify-content: space-between;
+   justify-content: space-between;
     flex-direction: column;
-    width:10vw;
+  
+    position: relative;
+    /* width:10vw;  */
 }
 .carouselitems::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    top:1;
+   
     content: '';
     width: 100%;
     background-color: #F0F0F5;
-    
-
+   
     height:4px;
     
     width:100%;
@@ -114,21 +121,28 @@ margin-bottom: 50rem;
     content: '';
     width: 100%;
     background-color: var(--primary-main-color);
-    
+ 
 
-    height:4px;
+    height:5px;
     
     width:100%;
 }
 .day{
-    text-align:start;
-    margin-right:2rem;
+   
+
     padding:1rem;
     width:60px;
-    height:20px;
-    font-weight:400;
-    font-size:14px;
-    line-height:20px;
+    height:100%;
+    font-weight:450;
+    font-size:1.3rem;
+  
+}
+.dayslots{
+   
+   padding: 0/5rem;
+   width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
 }
 #app {
     height: 100%;
@@ -170,7 +184,16 @@ margin-bottom: 50rem;
     height: 40px;
   } */
   
- 
+  .swiperslide {
+    width: calc(100% / 3 - 20px) !important;
+    overflow: hidden;
+}
+
+.swiperStyles {
+    padding: 0 50px;
+    width: 100%;
+}
+
  
 @media(max-width:767px)
 {

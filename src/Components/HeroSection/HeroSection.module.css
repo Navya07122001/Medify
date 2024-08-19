@@ -194,7 +194,11 @@ gap: 2rem;
 
         display: grid;
         grid-template-columns:repeat(1,1fr);
-       
-        gap:2rem
+       margin-left: auto;
+       margin-right: auto;
+       padding-left: 10rem;
+       gap: 2rem;
+       padding-right: auto;
+      text-align: center;
     }
 }

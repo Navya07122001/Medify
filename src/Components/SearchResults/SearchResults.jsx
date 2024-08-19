@@ -4,11 +4,13 @@ import uncoltick from '../../assets/uncoltick.png';
 import Card from '../Card/Card';
 import styles from './SearchResults.module.css';
 import ad from '../../assets/ad.png';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 function SearchResults({ hospitals }) {
+    const navigate=useNavigate("")
     const BookSlot = (time, date, location, hospitalName) => {
         const slotData = {
             time,
@@ -19,7 +21,8 @@ function SearchResults({ hospitals }) {
         let existingData = JSON.parse(localStorage.getItem('slots')) || [];
         existingData.push(slotData);
         localStorage.setItem('slots', JSON.stringify(existingData));
-        console.log("Saved slot:", slotData);
+      navigate("/booking")
+
     };
     useEffect(()=>{
 

@@ -6,8 +6,9 @@ import pillicon from '../../assets/pillicon.png'
 import Drugstoreicon from '../../assets/Drugstoreicon.png'
 import Search from "@mui/icons-material/Search";
 import styles from './SearchSection.module.css';
-
+import { useNavigate } from 'react-router-dom';
 function SearchSection() {
+    const navigate=useNavigate()
     return (
         <div styles={{ zIndex: '1' }}>
             <div className={styles.container}>
@@ -21,7 +22,7 @@ function SearchSection() {
                         <input type="text" placeholder='City' className={styles.inputfield} />
                     </div>
 
-                    <button className={styles.searchbtn}><Search sx={{fontSize:'2.5rem'}}/>Search</button>
+                    <button className={styles.searchbtn} onClick={()=>navigate("/search")}><Search sx={{fontSize:'2.5rem'}}/>Search</button>
 
                 </div>
                 <div className={styles.lookup}>

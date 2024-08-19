@@ -81,13 +81,13 @@ function Card({ hospitalName, location, BookSlot, isFromBooking, timeofbooking, 
                                         </div>
                                     </div>
 
-                                    (<div className={styles.bookingContainer}>
+                                    <div className={styles.bookingContainer}>
                                         <p style={{ color: '#01A400', fontWeight: '500', fontSize: '1.3rem' }}>Available Today</p>
                                         <button className={styles.bookingbtn} onClick={handleClick}>
                                             BOOK FREE Center visit
                                         </button>
                                     </div>
-                                    )
+                                    
                                 </div>
                                 {open && (
                                     <div className={styles.slotbooking}>

@@ -16,7 +16,7 @@ function Footer() {
     return (
         <div>
             <div className={styles.maindiv}>
-                <div style={{ display: 'flex', alignItems: 'end', marginLeft: '18rem', marginRight: '8rem' }}>
+                <div  className={styles.maincontainer} style={{ display: 'flex', alignItems: 'end', marginLeft: '18rem', marginRight: '8rem' }}>
                     <div className={styles.mobile1}>
                         <img src={seekpng} className={styles.seekimg} />
                         <img src={imgcontent} className={styles.contentimg} />

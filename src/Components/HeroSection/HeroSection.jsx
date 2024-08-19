@@ -24,7 +24,12 @@ import detox from '../../assets/detox.png';
 import leeimg from '../../assets/leeimg.png'
 import FamilyCare from '../FamilyCare/FamilyCare';
 import Faq from '../Faq/Faq';
+import {useNavigate} from 'react-router-dom';
 function HeroSection() {
+    const navigate=useNavigate();
+    const handleBooking=()=>{
+        navigate("/booking");
+    }
     return (
         <div>
             <div className={styles.hero}>
@@ -40,7 +45,7 @@ function HeroSection() {
                         <div>Surgeries</div>
                         <div>Software for Provider</div>
                         <div>Facilities</div>
-                        <button type="button" className={styles.bookingbtn}>My Bookings</button>
+                        <button type="button" className={styles.bookingbtn} onClick={handleBooking}>My Bookings</button>
                     </div>
                 </div>
                 <div className={styles.displaysec}>

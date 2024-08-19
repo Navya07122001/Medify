@@ -3,9 +3,9 @@
 <br/>
 <h4>Table of Contents</h4>
 <br/>
-<a id="#introduction">Introduction</a>
+<a href="#introduction">Introduction</a>
 <a id="#insallation"></a>
-<div>
+<div id="#introduction">
     <h4>Introduction</h4>
     <p>MEDIFY is a comprehensive platform designed to streamline the process of booking and managing medical appointments. Patients can easily find available slots, book appointments, and receive reminders. Medical centers can manage their schedules, view appointments, and update availability.</p>
 </div>

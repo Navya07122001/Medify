@@ -28,5 +28,5 @@
 </div>
 
 <div id="#screenshots">
-<img src="./public/homepage.png" height="500px" width="500px"/>
+<img src="./public/homepage.png" height="500px" width="800px"/>
 </div>

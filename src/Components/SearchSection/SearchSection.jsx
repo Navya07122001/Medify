@@ -7,22 +7,79 @@ import Drugstoreicon from '../../assets/Drugstoreicon.png'
 import Search from "@mui/icons-material/Search";
 import styles from './SearchSection.module.css';
 import { useNavigate } from 'react-router-dom';
+import { useState,useEffect } from 'react';
+
+import { getStates ,getAllcities,getMedicalcentres} from '../../data';
 function SearchSection() {
-    const navigate=useNavigate()
+    const [state,setState]=useState('')
+    const [city,setCity]=useState('')
+    const [stateres,setStateRes]=useState([]);
+    const [cityres,setCityRes]=useState([]);
+    const [hospitals,setHospitals]=useState([]);
+    const handleState = (e) => {
+
+        setState(e.target.value)
+    }
+    const handleCity = (e) => {
+        setCity(e.target.value)
+        console.log(e.target.value);
+    }
+    const handleSearch=async()=>{
+        console.log(state+" "+city)
+        navigate(`/search?state=${state}&city=${city}`)
+        const data=await getMedicalcentres(state,city);
+        setHospitals(data)
+        console.log(data)
+        
+    }
+    const navigate=useNavigate();
+    useEffect(()=>{
+        const fetchstatedata=async()=>{
+            const data=await getStates();
+            console.log(data)
+            setStateRes(data)
+        }
+     fetchstatedata();
+    },[]);
+    useEffect(()=>{
+        const getcitydata=async()=>{
+          
+            if(state.length>0)
+            {
+            const data=await getAllcities(state);
+          
+            setCityRes(data);
+            }
+        }
+        getcitydata();
+
+    },[state])
     return (
         <div styles={{ zIndex: '1' }}>
             <div className={styles.container}>
                 <div className={styles.inputsection}>
                     <div className={styles.inputsearch}>
                         <Search sx={{ color: '#ABB6C7',fontSize:'2.5rem' }} />
-                        <input type="text" placeholder='State' className={styles.inputfield} />
-                    </div>
+                        <select id="state" value={state} className={styles.inputfield} onChange={handleState} >
+                                    <option value="">Select a state</option>
+                                    {stateres?.length > 0 && stateres.map((state) => (
+                                        <option value={state} style={{ color: 'black' }}>
+                                            {state}
+                                        </option>
+                                    ))}
+                                </select>                    </div>
                     <div className={styles.inputsearch}>
                         <Search sx={{ color: '#ABB6C7',fontSize:'2.5rem' }} />
-                        <input type="text" placeholder='City' className={styles.inputfield} />
-                    </div>
+                        <select id="city" value={city} className={styles.inputfield} onChange={handleCity} >
+                                    <option value="">Select a City</option>
+                                    {cityres?.length > 0 ? cityres.map((city) => (
+                                        <option value={city} style={{ color: 'black' }}>
+                                            {city}
+                                        </option>
+                                    )) : <> <input type="text" placeholder='City' className={styles.inputfield} /> </>}
+                                </select>                    </div>
 
-                    <button className={styles.searchbtn} onClick={()=>navigate("/search")}><Search sx={{fontSize:'2.5rem'}}/>Search</button>
+                    <button className={styles.searchbtn} onClick={handleSearch} sx={{fontSize:'2.5rem'}}>Search</button>
 
                 </div>
                 <div className={styles.lookup}>

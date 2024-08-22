@@ -26,10 +26,13 @@ import FamilyCare from '../FamilyCare/FamilyCare';
 import Faq from '../Faq/Faq';
 import {useNavigate} from 'react-router-dom';
 function HeroSection() {
+    
     const navigate=useNavigate();
     const handleBooking=()=>{
         navigate("/booking");
     }
+   
+  
     return (
         <div>
             <div className={styles.hero}>
@@ -40,7 +43,7 @@ function HeroSection() {
                     </div>
                     <div className={styles.navbar}>
                         <div>FindDoctors</div>
-                        <div>Hospitals</div>
+                        <div onClick={()=>navigate("/search")}>Hospitals</div>
                         <div>Medicines</div>
                         <div>Surgeries</div>
                         <div>Software for Provider</div>

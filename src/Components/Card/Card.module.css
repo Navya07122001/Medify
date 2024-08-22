@@ -82,6 +82,7 @@
     flex-wrap:wrap;
    justify-content: flex-end;
    padding-bottom: 3rem;
+   flex-direction: column;
 }
 .bookedContainer{
     display: flex;

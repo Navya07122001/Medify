@@ -42,7 +42,7 @@ function SearchResults({ hospitals }) {
                     </p>
                 </div>
 
-                {hospitals.map((hospital, index) => (
+                {hospitals?.map((hospital, index) => (
                     <Card
                         key={index}
                         hospitalName={hospital['Hospital Name']}
